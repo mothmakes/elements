@@ -10,7 +10,7 @@ colour = c_white;
 
 
 
-element = "neutral";
+element = elements.NEUTRAL;
 
 
 
