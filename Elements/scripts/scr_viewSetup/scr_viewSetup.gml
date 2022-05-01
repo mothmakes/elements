@@ -26,4 +26,7 @@ function scr_viewSetup(){
 	view_hport[0] = max_h;
 	
 	surface_resize(application_surface, view_wport[0], view_hport[0]);
+	
+	// Camera setup
+	instance_create_layer(0,0,"Instances",obj_camera);
 }
