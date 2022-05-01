@@ -10,4 +10,7 @@ function scr_constants(){
 		UP,
 		DOWN
 	}
+	
+	#macro GRID_H 8
+	#macro GRID_W 8
 }
