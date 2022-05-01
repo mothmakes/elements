@@ -21,6 +21,7 @@
 	{"id":{"name":"spr_tileDefault","path":"sprites/spr_tileDefault/spr_tileDefault.yy",},"order":0,},
 	{"id":{"name":"spr_highlightHover","path":"sprites/spr_highlightHover/spr_highlightHover.yy",},"order":0,},
 	{"id":{"name":"spr_highlightSelected","path":"sprites/spr_highlightSelected/spr_highlightSelected.yy",},"order":0,},
+	{"id":{"name":"spr_nextturn","path":"sprites/spr_nextturn/spr_nextturn.yy",},"order":0,},
     {"id":{"name":"scribble_font_add","path":"scripts/scribble_font_add/scribble_font_add.yy",},"order":0,},
     {"id":{"name":"__scribble_config_default_template","path":"scripts/__scribble_config_default_template/__scribble_config_default_template.yy",},"order":1,},
     {"id":{"name":"__scribble_class_page","path":"scripts/__scribble_class_page/__scribble_class_page.yy",},"order":6,},
