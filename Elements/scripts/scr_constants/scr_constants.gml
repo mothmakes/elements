@@ -3,4 +3,5 @@
 function scr_constants(){
 	#macro DISPLAY_W 1920
 	#macro DISPLAY_H 1080
+	
 }
