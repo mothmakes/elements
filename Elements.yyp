@@ -19,6 +19,8 @@
     {"id":{"name":"shd_fade_simple","path":"shaders/shd_fade_simple/shd_fade_simple.yy",},"order":1,},
     {"id":{"name":"spr_placeholder","path":"sprites/spr_placeholder/spr_placeholder.yy",},"order":0,},
 	{"id":{"name":"spr_tileDefault","path":"sprites/spr_tileDefault/spr_tileDefault.yy",},"order":0,},
+	{"id":{"name":"spr_highlightHover","path":"sprites/spr_highlightHover/spr_highlightHover.yy",},"order":0,},
+	{"id":{"name":"spr_highlightSelected","path":"sprites/spr_highlightSelected/spr_highlightSelected.yy",},"order":0,},
     {"id":{"name":"scribble_font_add","path":"scripts/scribble_font_add/scribble_font_add.yy",},"order":0,},
     {"id":{"name":"__scribble_config_default_template","path":"scripts/__scribble_config_default_template/__scribble_config_default_template.yy",},"order":1,},
     {"id":{"name":"__scribble_class_page","path":"scripts/__scribble_class_page/__scribble_class_page.yy",},"order":6,},
@@ -49,7 +51,10 @@
     {"id":{"name":"scribble_glyph_set","path":"scripts/scribble_glyph_set/scribble_glyph_set.yy",},"order":7,},
     {"id":{"name":"obj_screenflash","path":"objects/obj_screenflash/obj_screenflash.yy",},"order":1,},
 	{"id":{"name":"obj_tileManager","path":"objects/obj_tileManager/obj_tileManager.yy",},"order":1,},
+	{"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"order":1,},
     {"id":{"name":"scr_gameLogic","path":"scripts/scr_gameLogic/scr_gameLogic.yy",},"order":6,},
+	{"id":{"name":"scr_gui","path":"scripts/scr_gui/scr_gui.yy",},"order":6,},
+	{"id":{"name":"scr_tileUtil","path":"scripts/scr_tileUtil/scr_tileUtil.yy",},"order":6,},
     {"id":{"name":"obj_tile","path":"objects/obj_tile/obj_tile.yy",},"order":0,},
     {"id":{"name":"obj_screenfade","path":"objects/obj_screenfade/obj_screenfade.yy",},"order":0,},
     {"id":{"name":"shd_gritty","path":"shaders/shd_gritty/shd_gritty.yy",},"order":4,},
@@ -86,6 +91,7 @@
     {"id":{"name":"shdr_blur_1_pass_isoweight_discrete","path":"shaders/shdr_blur_1_pass_isoweight_discrete/shdr_blur_1_pass_isoweight_discrete.yy",},"order":3,},
     {"id":{"name":"shd_brightness","path":"shaders/shd_brightness/shd_brightness.yy",},"order":0,},
     {"id":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},"order":0,},
+
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},
