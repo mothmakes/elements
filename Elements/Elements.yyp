@@ -72,7 +72,6 @@
     {"id":{"name":"__scribble_generate_model","path":"scripts/__scribble_generate_model/__scribble_generate_model.yy",},"order":9,},
     {"id":{"name":"scribble_font_set_style_family","path":"scripts/scribble_font_set_style_family/scribble_font_set_style_family.yy",},"order":5,},
     {"id":{"name":"shd_day_and_night_v1","path":"shaders/shd_day_and_night_v1/shd_day_and_night_v1.yy",},"order":1,},
-    {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"order":0,},
     {"id":{"name":"__shd_scribble_bake_outline","path":"shaders/__shd_scribble_bake_outline/__shd_scribble_bake_outline.yy",},"order":12,},
     {"id":{"name":"scr_fsms","path":"scripts/scr_fsms/scr_fsms.yy",},"order":0,},
     {"id":{"name":"shd_duotone_simple_v2","path":"shaders/shd_duotone_simple_v2/shd_duotone_simple_v2.yy",},"order":3,},
@@ -133,7 +132,6 @@
     {"folderPath":"folders/Shaders/Masking.yy","order":7,"resourceVersion":"1.0","name":"Masking","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Shaders/Simple.yy","order":8,"resourceVersion":"1.0","name":"Simple","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Utils/Managers.yy","order":2,"resourceVersion":"1.0","name":"Managers","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Objects/GUI.yy","order":2,"resourceVersion":"1.0","name":"GUI","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
