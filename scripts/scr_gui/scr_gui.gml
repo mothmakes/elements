@@ -17,3 +17,10 @@ function create_button(gui_x,gui_y,scale,lerpDir,lerpDist,lerpSpeed,sprite,onCli
 	iid.lerpSpeed = lerpSpeed;
 	iid.onClick = onClick;
 }
+
+function create_queue_element(gui_x,gui_y) {
+	var iid = instance_create_layer(gui_x,gui_y,"GUI",obj_queue_element);
+	
+	iid.x = gui_x;
+	iid.y = gui_y;
+}

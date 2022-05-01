@@ -6,4 +6,3 @@ moveRange = 2;
 isSelected = false;
 
 
-

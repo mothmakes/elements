@@ -1,12 +1,15 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_queue_element",
+    "path": "sprites/spr_queue_element/spr_queue_element.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_unit",
-    "path": "objects/obj_unit/obj_unit.yy",
+    "name": "obj_button",
+    "path": "objects/obj_button/obj_button.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -20,15 +23,17 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Units",
-    "path": "folders/Objects/Units.yy",
+    "name": "GUI",
+    "path": "folders/Objects/GUI.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_unit_test",
+  "name": "obj_queue_element",
   "tags": [],
   "resourceType": "GMObject",
 }
