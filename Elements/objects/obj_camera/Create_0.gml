@@ -1,13 +1,13 @@
 aspect = DISPLAY_W/DISPLAY_H;
 
 if(aspect = 4/3){
-	camera_set_view_size(view_camera[0], 320, 240)
+	camera_set_view_size(view_camera[0], 640, 480)
 } else if (aspect = 16/9){
-	camera_set_view_size(view_camera[0], 320, 180)
+	camera_set_view_size(view_camera[0], 640, 360)
 } else if (aspect = 16/10){
-	camera_set_view_size(view_camera[0], 320, 200)
+	camera_set_view_size(view_camera[0], 640, 400)
 } else {
-	camera_set_view_size(view_camera[0],320*aspect,320);
+	camera_set_view_size(view_camera[0],640*aspect,640);
 }
 
 zoom_level = 1;
