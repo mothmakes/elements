@@ -10,3 +10,6 @@ for (var tempX = 0; tempX < GRID_W; tempX++) {
 		tiles[tile.xx][tile.yy] = tile;
 	}
 }
+
+
+

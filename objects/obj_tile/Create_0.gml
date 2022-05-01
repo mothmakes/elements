@@ -1,10 +1,16 @@
-
+ 
 xx = 0;
 yy = 0;
 
-isHover = false;
+isHighlighted = false;
+
 isSelected = false;
 
+colour = c_white; 
+
+
+
+element = "neutral";
 
 
 
