@@ -13,4 +13,15 @@ function scr_constants(){
 	
 	#macro GRID_H 8
 	#macro GRID_W 8
+	
+	#macro ELEMENTS_LENGTH 6
+	
+	enum elements {
+		NEUTRAL,
+		FIRE,
+		WATER,
+		COLD,
+		EARTH,
+		AIR
+	}
 }
