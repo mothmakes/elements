@@ -26,16 +26,11 @@ function executeTurn(queue) {
 		//perform attack before generating a new
 		sdm("ERR");
 	}
-	generateTarget();
-	_enemy_count = instance_number(obj_unit_enemy);
-	repeat(_enemy_count) {
-		var _element = ds_queue_dequeue(queue);
-		move_unit(_element.unit,_element.movex,_element.movey);
-		ds_queue_enqueue(queue,_element);
-	}
+	obj_gameManager.alarm[1] = TURN_DELAY * room_speed;
+	global.inputs_enabled = false;
 }
 
-function firstTurn(queue) {
+function turn(queue) {
 	generateTarget();
 	var _enemy_count = instance_number(obj_unit_enemy);
 	repeat(_enemy_count) {

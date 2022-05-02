@@ -15,7 +15,7 @@ function state_unitManager_attack() {
 		}
 	}
 	
-	if(mouse_check_button_pressed(mb_right)) {
+	if(mouse_check_button_pressed(mb_right) && global.inputs_enabled) {
 		state_switch("Move");
 	}
 }
