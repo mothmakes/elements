@@ -14,6 +14,7 @@ function scr_constants(){
 	
 	#macro GRID_H 8
 	#macro GRID_W 8
+	#macro TILE_SIZE 32
 	
 	#macro ELEMENTS_LENGTH 6
 	

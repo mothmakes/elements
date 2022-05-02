@@ -15,7 +15,7 @@ ds_grid_set(elementCombinations, elements.NEUTRAL, elements.AIR, elements.AIR);
 ds_grid_set(elementCombinations, elements.FIRE, elements.NEUTRAL, elements.FIRE);
 ds_grid_set(elementCombinations, elements.FIRE, elements.FIRE, elements.FIRE);
 ds_grid_set(elementCombinations, elements.FIRE, elements.WATER, elements.WATER);
-ds_grid_set(elementCombinations, elements.FIRE, elements.COLD, elements.COLD);
+ds_grid_set(elementCombinations, elements.FIRE, elements.COLD, elements.NEUTRAL);
 ds_grid_set(elementCombinations, elements.FIRE, elements.EARTH, elements.EARTH);
 ds_grid_set(elementCombinations, elements.FIRE, elements.AIR, elements.AIR);
 
@@ -29,19 +29,19 @@ ds_grid_set(elementCombinations, elements.WATER, elements.AIR, elements.AIR);
 
 //COLD INTERACTIONS
 ds_grid_set(elementCombinations, elements.COLD, elements.NEUTRAL, elements.COLD);
-ds_grid_set(elementCombinations, elements.COLD, elements.FIRE, elements.FIRE);
+ds_grid_set(elementCombinations, elements.COLD, elements.FIRE, elements.NEUTRAL);
 ds_grid_set(elementCombinations, elements.COLD, elements.WATER, elements.WATER);
 ds_grid_set(elementCombinations, elements.COLD, elements.COLD, elements.COLD);
 ds_grid_set(elementCombinations, elements.COLD, elements.EARTH, elements.EARTH);
 ds_grid_set(elementCombinations, elements.COLD, elements.AIR, elements.AIR);
 
 //EARTH INTERACTIONS
-ds_grid_set(elementCombinations, elements.COLD, elements.NEUTRAL, elements.COLD);
-ds_grid_set(elementCombinations, elements.COLD, elements.FIRE, elements.FIRE);
-ds_grid_set(elementCombinations, elements.COLD, elements.WATER, elements.WATER);
-ds_grid_set(elementCombinations, elements.COLD, elements.COLD, elements.COLD);
-ds_grid_set(elementCombinations, elements.COLD, elements.EARTH, elements.EARTH);
-ds_grid_set(elementCombinations, elements.COLD, elements.AIR, elements.AIR);
+ds_grid_set(elementCombinations, elements.EARTH, elements.NEUTRAL, elements.COLD);
+ds_grid_set(elementCombinations, elements.EARTH, elements.FIRE, elements.FIRE);
+ds_grid_set(elementCombinations, elements.EARTH, elements.WATER, elements.WATER);
+ds_grid_set(elementCombinations, elements.EARTH, elements.COLD, elements.COLD);
+ds_grid_set(elementCombinations, elements.EARTH, elements.EARTH, elements.EARTH);
+ds_grid_set(elementCombinations, elements.EARTH, elements.AIR, elements.AIR);
 
 //AIR INTERACTIONS
 ds_grid_set(elementCombinations, elements.AIR, elements.NEUTRAL, elements.AIR);
