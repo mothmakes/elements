@@ -1,4 +1,6 @@
-
+function getTileByCell(xx,yy) {
+	return obj_tileManager.tiles[xx][yy];	
+}
 
 function deselectAll() {
 	for (var tempX = 0; tempX < GRID_W; tempX++) { 

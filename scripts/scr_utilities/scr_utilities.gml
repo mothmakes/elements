@@ -8,6 +8,21 @@ function a(){
 	return arr;
 }
 
+function Vector2(xx = 0,yy = 0) constructor {
+	x = xx;
+	y = yy;
+	
+	static Add = function(vec2) {
+		x += vec2.x;
+		y += vec2.y;
+	}
+	
+	static Subtract = function(vec2) {
+		x -= vec2.x;
+		y -= vec2.y;
+	}
+}
+
 function sdm(_string) {
 	show_debug_message(_string);	
 }
