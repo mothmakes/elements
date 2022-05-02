@@ -19,11 +19,11 @@ function scr_constants(){
 	#macro ELEMENTS_LENGTH 6
 	
 	enum elements {
-		NEUTRAL,
-		FIRE,
-		WATER,
-		COLD,
-		EARTH,
-		AIR
+		NEUTRAL = 0,
+		FIRE = 1,
+		WATER = 2,
+		COLD = 3,
+		EARTH = 4,
+		AIR = 5
 	}
 }

@@ -3,3 +3,6 @@ yy = 0;
 
 moveRange = 2;
 canMove = true;
+
+element = elements.NEUTRAL;
+
