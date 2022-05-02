@@ -6,5 +6,9 @@ function deselectAll() {
 			obj_tileManager.tiles[tempX][tempY].deselect();
 		}
 	}
+	
+	with(obj_unit_player) {
+		isSelected = false;
+	}
 }
 
