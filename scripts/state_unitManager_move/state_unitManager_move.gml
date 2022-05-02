@@ -3,7 +3,7 @@
 function state_unitManager_move() {
 	if(state_new) {
 		sdm(state_name);
-		calculateMoveTiles(selected.canMove ? selected.moveRange : 0, selected.xx, selected.yy);
+		calculateMoveTiles(selected.canMove ? selected.moveRange : 0, selected.xx, selected.yy,obj_unit_player);
 		onTileClick = function(tile_x,tile_y) {
 			var _justSelected = noone;
 			// For every player unit, check if the tile contains that unit
@@ -22,7 +22,16 @@ function state_unitManager_move() {
 			} else {
 				// Movement code here
 				// make sure the tile moved to is selected
-				
+				var _tile = getTileByCell(tile_x,tile_y);
+				if(tile_array_contains(moveTiles,_tile) != noone) {
+					move_unit(selected,_tile.xx,_tile.yy);
+					_tile.isSelected = true;
+					selected.canMove = false;
+					state_new = true;
+				} else {
+					selected = noone;
+					state_switch("Idle");
+				}
 			}
 		}
 		
@@ -33,7 +42,7 @@ function state_unitManager_move() {
 		}
 		
 		for(var i=0;i<array_length(moveTiles);i++) {
-			moveTiles[i].isHighlighted = true;
+			moveTiles[i].tile.isHighlighted = true;
 		}
 	}
 	

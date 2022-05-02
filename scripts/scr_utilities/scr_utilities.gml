@@ -8,6 +8,16 @@ function a(){
 	return arr;
 }
 
+// Checks if the value is contained in the array - returns position, or noone otherwise
+function array_contains(array,value) {
+	for(var i=0;i<array_length(array);i++) {
+		if(array[i] == value) {
+			return i;
+		}
+	}
+	return noone;
+}
+
 function Vector2(xx = 0,yy = 0) constructor {
 	x = xx;
 	y = yy;

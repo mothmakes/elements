@@ -13,3 +13,12 @@ function deselectAll() {
 		isSelected = false;
 	}
 }
+
+function tile_array_contains(array, tile) {
+	for(var i=0;i<array_length(array);i++) {
+		if(array[i].tile == tile) {
+			return i;
+		}
+	}
+	return noone;
+}
