@@ -1,5 +1,7 @@
 units = [];
 units[0] = instance_create_layer(0,32,"Instances",obj_unit_house);
+units[0].xx = 0;
+units[0].yy = 1;
 player_units = [];
 player_units[0] = instance_create_layer(0,0,"Instances",obj_unit_player_main);
 player_units[1] = instance_create_layer(32,32,"Instances",obj_unit_player);
