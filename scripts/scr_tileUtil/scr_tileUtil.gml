@@ -13,16 +13,3 @@ function deselectAll() {
 		isSelected = false;
 	}
 }
-
-
-function getUnit(x1, y1) {
-	//searches through all units (obj_unitManager.units + obj_unitManager.player_units) and returns the unit on the specified x and y, if any
-	with (obj_unit) {
-	  if (xx == x1 && yy == y1) return self.id;
-	}  
-	return noone;
-}
-
-
-
-

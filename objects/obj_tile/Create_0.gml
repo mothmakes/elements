@@ -7,11 +7,3 @@ isSelected = false;
 colour = c_white;
 
 element = elements.NEUTRAL;
-
-movementCost = 1;
-
-
-
-
-
-

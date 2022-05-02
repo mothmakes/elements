@@ -1,3 +1,12 @@
+function getUnit(x1, y1) {
+	//searches through all units (obj_unitManager.units + obj_unitManager.player_units) and returns the unit on the specified x and y, if any
+	with (obj_unit) {
+	  if (xx == x1 && yy == y1) return self.id;
+	}  
+	return noone;
+}
+
+
 function updateTileNode(node,parent,queue,costs,max_cost) {
 	if(point_in_rectangle(node.x,node.y,0,0,GRID_W,GRID_H)) {
 		var _cost = getTileByCell(node.x,node.y).movementCost + costs[# parent.x,parent.y];
