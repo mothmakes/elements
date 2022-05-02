@@ -3,7 +3,7 @@
 function state_unitManager_move() {
 	if(state_new) {
 		sdm(state_name);
-		calculateMoveTiles(selected.canMove ? selected.moveRange : 0, selected.xx, selected.yy,obj_unit_player);
+		calculateMoveTiles(selected.canMove ? selected.moveRange : 0, selected.xx, selected.yy);
 		onTileClick = function(tile_x,tile_y) {
 			var _justSelected = noone;
 			// For every player unit, check if the tile contains that unit

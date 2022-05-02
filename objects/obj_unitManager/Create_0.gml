@@ -1,10 +1,9 @@
 units = [];
 units[0] = create_unit(0,1,obj_unit_house);
+units[1] = create_unit(2,0,obj_unit_enemy);
 player_units = [];
 player_units[0] = create_unit(0,0,obj_unit_player_main);
 player_units[1] = create_unit(1,1,obj_unit_player);
-player_units[1].xx = 1;
-player_units[1].yy = 1;
 
 moveTiles = noone;
 selected = noone;

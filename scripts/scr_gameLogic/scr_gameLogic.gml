@@ -4,4 +4,43 @@ function scr_gameLogic(){
 
 }
 
+function TargetElement(_unit, _movex, _movey,_targetx, _targety) constructor {
+	unit = _unit;
+	targetx = _targetx;
+	targety = _targety;
+	movex = _movex;
+	movey = _movey;
+}
 
+function generateTarget() {
+	with(obj_unit_enemy) {
+		//Select something to target, and choose move coordinates based on that
+		ds_queue_enqueue(obj_queue.queue,new TargetElement(self.id,xx-1,yy,xx-2,yy));
+	}
+}
+
+function executeTurn(queue) {
+	var _enemy_count = instance_number(obj_unit_enemy);
+	repeat(_enemy_count) {
+		var _element = ds_queue_dequeue(queue);
+		//perform attack before generating a new
+		sdm("ERR");
+	}
+	generateTarget();
+	_enemy_count = instance_number(obj_unit_enemy);
+	repeat(_enemy_count) {
+		var _element = ds_queue_dequeue(queue);
+		move_unit(_element.unit,_element.movex,_element.movey);
+		ds_queue_enqueue(queue,_element);
+	}
+}
+
+function firstTurn(queue) {
+	generateTarget();
+	var _enemy_count = instance_number(obj_unit_enemy);
+	repeat(_enemy_count) {
+		var _element = ds_queue_dequeue(queue);
+		move_unit(_element.unit,_element.movex,_element.movey);
+		ds_queue_enqueue(queue,_element);
+	}
+}

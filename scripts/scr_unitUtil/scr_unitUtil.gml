@@ -32,15 +32,15 @@ function getUnit(x1, y1) {
 }
 
 // Updates the grid costs and grid queue depending on the current node and it's parent node
-function updateTileNode(node,parent,queue,costs,max_cost,team) {
+function updateTileNode(node,parent,queue,costs,max_cost) {
 	// Check if in grid
-	if(point_in_rectangle(node.x,node.y,0,0,GRID_W,GRID_H)) {
+	if(point_in_rectangle(node.x,node.y,0,0,GRID_W-1,GRID_H-1)) {
 		// Calculate the cost to move to this tile based on the tiles cost and cost of the parent node
 		var _cost = getTileByCell(node.x,node.y).movementCost + costs[# parent.x,parent.y].cost;
 		// Gets the unit at a tile
 		var _unit = getUnit(node.x,node.y);
 		// If there is no unit, or the unit is of the same team, continue down this branch
-		if(_unit == noone || (_unit.object_index == team || object_is_ancestor(_unit.object_index,team))) {
+		if(_unit == noone) {
 			// If the cost is less than the movement max cost, or is the minimum, update the cost
 			if(_cost <= max_cost && _cost < costs[# node.x, node.y].cost) {
 				// Only enqueue the node if it has not been visited prior
@@ -55,28 +55,28 @@ function updateTileNode(node,parent,queue,costs,max_cost,team) {
 }
 
 // Compute costs for each adjacent tile
-function computeAdjacentTiles(queue,costs,max_cost,team) {
+function computeAdjacentTiles(queue,costs,max_cost) {
 	var _node = ds_queue_dequeue(queue);
 	
 	var _left = new Vector2(-1,0);
 	_left.Add(_node);
-	updateTileNode(_left,_node,queue,costs,max_cost,team);
+	updateTileNode(_left,_node,queue,costs,max_cost);
 	
 	var _top = new Vector2(0,-1);
 	_top.Add(_node);
-	updateTileNode(_top,_node,queue,costs,max_cost,team);
+	updateTileNode(_top,_node,queue,costs,max_cost);
 	
 	var _bottom = new Vector2(0,1);
 	_bottom.Add(_node);
-	updateTileNode(_bottom,_node,queue,costs,max_cost,team);
+	updateTileNode(_bottom,_node,queue,costs,max_cost);
 	
 	var _right = new Vector2(1,0);
 	_right.Add(_node);
-	updateTileNode(_right,_node,queue,costs,max_cost,team);
+	updateTileNode(_right,_node,queue,costs,max_cost);
 }
 
 // Modify a list of tiles that are in movement range
-function calculateMoveTiles(range, start_x, start_y, team) {
+function calculateMoveTiles(range, start_x, start_y) {
 	moveTiles = [];
 	
 	// Setup grid of costs
@@ -94,7 +94,7 @@ function calculateMoveTiles(range, start_x, start_y, team) {
 	
 	// While there are branches to explore, continue to explore and calculate costs
 	while(!ds_queue_empty(_process_queue)) {
-		computeAdjacentTiles(_process_queue,_tile_costs,range,team)
+		computeAdjacentTiles(_process_queue,_tile_costs,range)
 	}
 	
 	// For every tile in range, add it to a list of moveable tiles
