@@ -48,7 +48,7 @@ function updateTileNode(node,parent,queue,costs,max_cost,team) {
 					ds_queue_enqueue(queue,node);
 				}
 				costs[# node.x, node.y].cost = _cost;
-				costs[# node.x, node.y].parent = costs[# parent.x,parent.y].tile;
+				costs[# node.x, node.y].parent = costs[# parent.x,parent.y];
 			}
 		}
 	}

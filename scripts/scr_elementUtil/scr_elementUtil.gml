@@ -16,3 +16,5 @@ function applyElementStatus(unit, e2) {
 	
 	unit.element = combineElements(unit.element, e2);
 }
+
+//function applyElementStatusToTile()
