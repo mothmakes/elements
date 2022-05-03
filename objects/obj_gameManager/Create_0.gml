@@ -3,6 +3,7 @@ scr_constants();
 application_surface_draw_enable(false);
 
 queuer = instance_create_layer(0,0,"Managers",obj_queue);
+moveTiles = [];
 
 fnNextTurn = function() {
 	with(obj_unit_player) {

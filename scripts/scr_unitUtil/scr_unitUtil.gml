@@ -14,12 +14,34 @@ function TileNode(_cost, _parent, _tile) constructor {
 }
 
 // Move a unit to a grid position
-function move_unit(unit, destx, desty) {
-	unit.xx = destx;
-	unit.yy = desty;
+function move_unit(unit, tilenode) {
+	unit.xx = tilenode.tile.xx;
+	unit.yy = tilenode.tile.yy;
 	
-	unit.x = destx * TILE_SIZE;
-	unit.y = desty * TILE_SIZE;
+	unit.x = tilenode.tile.xx * TILE_SIZE;
+	unit.y = tilenode.tile.yy * TILE_SIZE;
+	
+	//Calculates elemental effects for the moved unit
+	var path = ds_stack_create();
+	var currentNode = tilenode;
+	do {
+		ds_stack_push(path, currentNode);
+		currentNode = currentNode.parent;
+	}
+	until (currentNode == noone);
+			
+	do {
+		var tile = ds_stack_pop(path).tile;
+		var tileInitialElement = tile.element;
+						
+		if (tileInitialElement != elements.NEUTRAL) {
+			applyElement(tile, unit.element);
+			applyElementStatus(unit, tileInitialElement);
+		}
+	}
+	until (ds_stack_empty(path))
+					
+	ds_stack_destroy(path);
 }
 
 // Gets the unit at a space, or returns noone if empty

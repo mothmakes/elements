@@ -24,41 +24,10 @@ function state_unitManager_move() {
 				// make sure the tile moved to is selected
 				var _tile = getTileByCell(tile_x,tile_y);
 				if(tile_array_contains(moveTiles,_tile) != noone) {
-					move_unit(selected,_tile.xx,_tile.yy);
+					move_unit(selected,moveTiles[tile_array_contains(moveTiles,_tile)]);
 					_tile.isSelected = true;
 					selected.canMove = false;
 					state_new = true;
-					
-					
-					//Calculates elemental effects for the moved unit
-					var path = ds_stack_create();
-					var currentNode = moveTiles[tile_array_contains(moveTiles, _tile)];
-					do {
-						ds_stack_push(path, currentNode);
-						currentNode = currentNode.parent;
-					}
-					until (currentNode == noone);
-			
-					do {
-						var tile = ds_stack_pop(path).tile;
-						var tileInitialElement = tile.element;
-						
-						if (tileInitialElement != elements.NEUTRAL) {
-							applyElement(tile, selected.element);
-							applyElementStatus(selected, tileInitialElement);
-						}
-						
-						
-						
-						
-					}
-					until (ds_stack_empty(path))
-					
-					ds_stack_destroy(path);
-					
-					
-					
-					
 				} else {
 					selected = noone;
 					state_switch("Idle");
